@@ -1,0 +1,23 @@
+# Secretos y entorno (nunca subir)
+.env
+.env.*
+!.env.example
+
+# PDFs y datos de entrada confidenciales
+documents/
+
+# Salidas generadas
+outputs/
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Editor / OS
+~$*
+.DS_Store
+Thumbs.db

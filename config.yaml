@@ -1,0 +1,18 @@
+openai_api_key_env: OPENAI_API_KEY
+google_api_key_env: GOOGLE_API_KEY
+google_model: gemini-2.0-flash
+model: gpt-5-mini
+documents_dir: documents
+output_dir: outputs
+pages_per_segment: 10
+num_questions: 20
+question_instructions: >
+  Generate practical comprehension questions that cover key facts, definitions,
+  procedures, and important details from the text.
+difficulty: mixed
+temperature: 0.2
+max_output_tokens: 4000
+include_metadata_columns: false
+retry_attempts: 3
+retry_backoff_seconds: 2.0
+
