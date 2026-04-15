@@ -25,7 +25,9 @@ export async function extractPageTexts(buffer: Uint8Array): Promise<string[]> {
     const page = await doc.getPage(i);
     const content = await page.getTextContent();
     const text = content.items
-      .map((item: { str?: string }) => (typeof item.str === "string" ? item.str : ""))
+      .map((item) =>
+        "str" in item && typeof item.str === "string" ? item.str : ""
+      )
       .join(" ")
       .replace(/\s+/g, " ")
       .trim();
